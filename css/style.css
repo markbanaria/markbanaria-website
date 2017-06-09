@@ -1,3 +1,17 @@
+@font-face {
+  font-family: "prx_nova";
+  src: url(../fonts/ProximaNova-Regular.otf);
+  font-weight: 300;
+}
+@font-face {
+  font-family: "prx_nova";
+  src: url(../fonts/ProximaNova-Bold.otf);
+  font-weight: 600;
+}
+body {
+  font-family: "prx_nova", sans-serif;
+}
+
 .font-14 {
   font-size: 14px;
   line-height: 21px;
@@ -649,7 +663,6 @@ h3 {
 
 body {
   background: #efefef;
-  font-family: "proxima nova";
 }
 
 .box {
