@@ -1,0 +1,44 @@
+@mixin btn_color($bg-color, $text-color, $border-color) 
+  background: $bg-color
+  color: $text-color
+  border-color: $border-color
+
+  &:hover 
+    background: darken($bg-color, 12%)
+    color: darken($text-color, 12%)
+
+.btn 
+  font-size: 14px
+  font-weight: 700
+  color: $copy-1
+  background: $gray-4
+  border: 1px solid $gray-4
+  padding: 0 24px
+  line-height: 44px
+  vertical-align: middle
+  transition: 0.2s
+
+  &:hover 
+    color: $copy-1
+    background: darken($gray-4, 12%)
+
+.btn-white-clear
+  @include btn_color(transparent, white, white)
+
+.btn-gray-3 
+  @include btn_color($gray-3, $copy-1, $gray-4)
+
+.btn-copy-1-clear
+  @include btn_color(transparent, $copy-1, $copy-1)    
+
+
+.btn-lg 
+  font-size: 16px
+  line-height: 48px
+
+
+.btn-xlg 
+  font-size: 16px
+  line-height: 64px
+
+

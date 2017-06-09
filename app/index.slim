@@ -1,15 +1,111 @@
-require slim/include
-
 head
+  meta charset="UTF-8"
+  meta name="viewport" content="initial-scale=1, maximum-scale=1"
+  link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css"
+  link rel="stylesheet" href="css/bootstrap.css"
   link rel="stylesheet" href="css/style.css"
 
 body
 
-  .container
-    .row
-      .col-xs-12
-        h1 Hello World
+  #home-page
+    div style="background-image: url('images/backgrounds/relyable-home-banner.jpg'); background-attachment: fixed"
+      nav.navbar.navbar-relyable.mb0
+        .container: .row: .col-xs-12
+          .container-fluid
+          .navbar-header
+            button.navbar-toggle.collapsed aria-expanded="false" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button" 
+              span.sr-only Toggle navigation
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            a.navbar-brand href="#"
+              img src="images/logo/relyable-logo.png"
+          #bs-example-navbar-collapse-1.collapse.navbar-collapse
+            ul.nav.navbar-nav.pull-right
+              li.active: a.uppercase.text-700 href="#" Home
+              li: a.uppercase.text-700 href="#" Services
+              li: a.uppercase.text-700 href="#" Company
+              li: a.uppercase.text-700 href="#" Contact Us
+              
 
-  ==Slim::Template.new('./file.slim').render(scope)      
+      .main-banner.pt64.pb64
+        .container.pt64.pb64
+          .row
+            .col-xs-12
+              .text-white.text-center
+                .font-48.text-700
+                  | Construction Services & Products
+                .font-21.text-300.pt16
+                  | Relyable Building Technologies, Inc. is commited to providing high service quality.
+          .row 
+            .col-xs-6.col-centered.pt64
+              .row
+                .col-xs-6.pr8
+                  .btn.btn-white-clear.btn-block.btn-lg.uppercase.font-14.text-700 Services
+                .col-xs-6.pl8
+                  .btn.btn-white-clear.btn-block.btn-lg.uppercase.font-14.text-700 Products
 
-  script src="js/app.js"  
+    .partners.bg-gray-3.border-bottom              
+      .container           
+        .row
+          .col-xs-12
+            .text-center        
+              .more-below.zmdi.zmdi-chevron-down.icon-button
+
+        .row.pt32
+          .col-xs-12
+            .font-16.text-center.text-300.text-copy-0.uppercase Our Partners      
+        .row.pt32.pb64
+          .col-xs-12.col-sm-4.pl32.pr32
+            img.img-responsive src="images/partners/bostik-gray.png"
+          .col-xs-12.col-sm-4.pl32.pr32
+            img.img-responsive src="images/partners/hempel-gray.png"
+          .col-xs-12.col-sm-4.pl32.pr32
+            img.img-responsive src="images/partners/flowcrete-gray.png"
+    
+    .description
+      .bg-white.border-bottom
+        .container
+          .row.pt64.pb64
+            .row
+              .col-xs-12.col-sm-4.col-sm-offset-2
+                .font-40.text-copy-2
+                  | Dependability 
+                  br
+                  | & Consistency
+              .col-xs-12.col-sm-4
+                .font-16.text-copy-1
+                  | Nonsenis estempedi corest evellest estium aseti eseque et remos es molectiunt re, voluptat ex et laboreribus dis dit, ut omniet a nonsedi orporitat volorro consedi arumetus.
+
+    .services
+      .container.pb40
+        .row.pt40
+          .col-xs-12
+            .font-16.text-center.text-700.text-copy-2.uppercase SERVICES
+        .row.pt32
+          .col-sm-3.col-xs-12
+            .card.card-clickable.services-tile
+              .tile-thumb.bg-black style="background-image: url('images/services/relyable-services.jpg')"
+              .p16.text-copy-1
+                | Interior Painting
+          .col-sm-3.col-xs-12
+            .card.card-clickable.services-tile
+              .tile-thumb.bg-black style="background-image: url('images/services/relyable-services2.jpg')"
+              .p16.text-copy-1
+                | Exterior Painting
+          .col-sm-3.col-xs-12
+            .card.card-clickable.services-tile
+              .tile-thumb.bg-black style="background-image: url('images/services/relyable-services3.jpg')"
+              .p16.text-copy-1
+                | Roof Leak Painting
+          .col-sm-3.col-xs-12
+            .card.card-clickable.services-tile
+              .tile-thumb.bg-black style="background-image: url('images/services/relyable-services4.jpg')"
+              .p16.text-copy-1
+                | Roof Deck Proofing
+        .row.pt32
+          .col-sm-4.col-xs-12.col-centered
+            .btn.btn-copy-1-clear.btn-block.uppercase
+              | View Full List        
+
+  script type="text/javascript" src="js/app.min.js"          
